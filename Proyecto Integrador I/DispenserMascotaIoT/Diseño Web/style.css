@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+}
+
+#logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-toggle {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.nav-menu .dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+.nav-menu .dropdown .dropdown-content {
+  display: none;
+  background-color: #007bff;
+  color: white;
+  width: 200px;
+}
+.nav-menu .dropdown .dropdown-content a {
+  display: block;
+  padding: 0.5em;
+  color: white;
+  text-decoration: none;
+}
+.nav-menu .dropdown .dropdown-content a:hover {
+  background-color: #0062cc;
+}
+
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex;
+    /*distribuir los 3 elementos sobre el nav-menu*/
+    justify-content: space-between;
+    /* los acomodo un poco a la izquierda*/
+    margin-left: 1em;
+    /*los separo un poco*/
+    gap: 1em;
+  }
+  .nav-menu .dropdown {
+    position: relative;
+  }
+  .nav-menu .dropdown .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .nav-menu .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+.content {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+}
+.content aside {
+  background-color: #555;
+  color: white;
+  padding: 1em;
+}
+.content aside h3 {
+  margin-bottom: 0.5em;
+}
+.content aside ul {
+  list-style: none;
+}
+.content aside ul li {
+  margin: 0.5em 0;
+}
+.content aside ul li a {
+  color: white;
+  text-decoration: none;
+}
+.content aside ul li a:hover {
+  text-decoration: underline;
+}
+.content main {
+  flex: 1;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.content main .home-section, .content main #food-calculator {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.content main .home-section .section-image, .content main #food-calculator .section-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+.content main .home-section .section-content, .content main #food-calculator .section-content {
+  padding: 1em;
+}
+.content main .home-section .section-content h2, .content main #food-calculator .section-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.content main #food-calculator h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  flex: 0 0 auto;
+}
+.content main #food-calculator #calculate-container {
+  flex: 1;
+  display: flex;
+}
+.content main #food-calculator #calculate-container label, .content main #food-calculator #calculate-container select, .content main #food-calculator #calculate-container button, .content main #food-calculator #calculate-container p {
+  margin-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+  .content aside {
+    color-scheme: #555;
+    flex: 1;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+  .content main {
+    flex: 3;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(35, 89, 139, 0.9764705882);
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */

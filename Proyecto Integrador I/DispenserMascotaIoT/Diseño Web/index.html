@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispenser para Mascotas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class = nav-container>
+        <div id="logo">PetFeeder</div>
+        <button class="nav-toggle">
+            <i class="fa fa-bars"></i>
+        </button>
+        <nav class="nav-menu" id="myNav">
+            <div class="dropdown home">
+                <button class="dropbtn">Inicio</button>
+                <div class="dropdown-content">
+                    <a href="./index.html">Dashboard</a>
+                    <a href="./pages/about.html">Acerca de</a>
+                </div>
+            </div>
+            <div class="dropdown settings">
+                <button class="dropbtn">Configuraciones</button>
+                <div class="dropdown-content">
+                    <a href="./pages/food_schedule.html">Horarios de Comida</a>
+                    <a href="./pages/device_settings.html">Configuración del Dispenser</a>
+                </div>
+            </div>
+            <div class="dropdown account">
+                <button class="dropbtn">Cuenta</button>
+                <div class="dropdown-content">
+                    <a href="./pages/profile.html">Perfil</a>
+                    <a href="./pages/logout.html">Cerrar Sesión</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <aside>
+            <h3>Configuraciones Rápidas</h3>
+            <ul>
+                <li><a href="./pages/food_schedule.html">Horarios de Comida</a></li>
+                <li><a href="./pages/device_settings.html">Configuración del Dispenser</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="dashboard" class="home-section">
+                <img src="/Proyecto Integrador I/DispenserMascotaIoT/Diseño Web/assets/portada_animales.jpg">
+                <div class="section-image" style="background-image: url('./assets/images/pet_feeder.jpg')"></div>
+                <div class="section-content">
+                    <h2>Dashboard</h2>
+                    <p>
+                        Desde este panel, podrás controlar todas las funciones de tu dispenser para mascotas. Puedes programar horarios, gestionar la cantidad de comida y mucho más.
+                    </p>
+                </div>
+            </section>
+            <section id="food-calculator">
+                <h2>Calculadora de Comida para Mascotas</h2>
+                <div id="calculate-container">
+                    <label for="petType">Tipo de animal:</label>
+                    <select id="petType">
+                        <option value="dog">Perro</option>
+                        <option value="cat">Gato</option>
+                    </select>
+            
+                    <label for="petSize">Tamaño del animal:</label>
+                    <select id="petSize">
+                        <option value="small">Pequeño</option>
+                        <option value="medium">Mediano</option>
+                        <option value="large">Grande</option>
+                    </select>
+            
+                    <label for="petActivity">Nivel de actividad:</label>
+                    <select id="petActivity">
+                        <option value="low">Bajo</option>
+                        <option value="moderate">Moderado</option>
+                        <option value="high">Alto</option>
+                    </select>
+            
+                    <button id="calculate-button">Calcular</button>
+                    
+                    <p id="calculation-result"></p>
+                </div>                
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>PetFeeder - Alimentando a tu mejor amigo</p>
+        <p>Copyright © 2023</p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
